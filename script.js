@@ -30,7 +30,7 @@ window.addEventListener("load", function () {
 	}
 });
 
-
+//navtab
 function openPage(pageName, elmnt, color) {
 	var i, tabcontent, tablinks;
 	tabcontent = document.getElementsByClassName("tabcontent");
@@ -47,8 +47,8 @@ function openPage(pageName, elmnt, color) {
 	elmnt.style.color = "black";
 }
 
-// Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
 
 function casesType(evt, caseType) {
 	var i, tabcontent, tablinks;
@@ -64,6 +64,7 @@ function casesType(evt, caseType) {
 	evt.currentTarget.className += " active";
 }
 
+//casetab
 function cases(evt, cases) {
 	var i, tabcontent, tablinks;
 	tabcontent = document.getElementsByClassName("cases");
@@ -78,7 +79,28 @@ function cases(evt, cases) {
 	evt.currentTarget.className += " active";
 }
 
-var div2Containers = document.querySelectorAll(".div2");
+//manage tab
+function manageType(caseType, elmnt, color) {
+        var i, casetypetabcontent, casetypetablinks;
+        casetypetabcontent = document.getElementsByClassName("casetypetabcontent");
+        for (i = 0; i < casetypetabcontent.length; i++) {
+            casetypetabcontent[i].style.display = "none";
+        }
+        casetypetablinks = document.getElementsByClassName("casetypetablink");
+        for (i = 0; i < casetypetablinks.length; i++) {
+            casetypetablinks[i].style.backgroundColor = "";
+            casetypetablinks[i].style.color = "";
+        }
+        document.getElementById(caseType).style.display = "block";
+        elmnt.style.backgroundColor = color;
+        elmnt.style.color = "black";
+    }
+
+    document.getElementById("defaultType").click();
+
+//dragging y-axis
+
+var div2Containers = document.querySelectorAll(".drag");
 
 div2Containers.forEach(function (container) {
 	var isDragging = false;
