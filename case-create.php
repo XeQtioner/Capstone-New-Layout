@@ -11,35 +11,23 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="styleforindex.css">
+    <link rel="stylesheet" href="styleforfront.css">
   </head>
   <body>
   <div class="showcase">
-            <!--Navbar Top Section-->
-            <div class="navbar-top">
-              <ul class="left">
-                <li><a href="#">Firm(LOGO)</a></li>
-                <li><a href="#">Number</a></li>
-                <li><a href="#">Address</a></li>
-                <li><a href="#">Address</a></li>
-              </ul>
-              <ul class="right">
-                
-                <li><a href="#"><i class="fas fa-user me" id="user-btn"></i></a></li>
-                <li><a href="#"><i class="fas fa-search" id="user-btn"></i></a></li>
+      <div class="navbar-bottom">
+        <a href="#" class="brand-left">Central Bureau of Investigation - Case Create</a>
+        <ul class="menu-right">
+          <li><a href="#">Insights</a></li>
+          <li><a href="#">Cases/Evidence</a></li>
+          <li><a href="index.php">Reports</a></li>
+          <!--<li><a href="login.php">Internal Cases</a></li>-->
+          <li><a href="#">Contact</a></li>
+          <li><a href="#"><i class="fas fa-user me" id="user-btn"></i></a></li>
+          <li><a href="frontend.php"><i class="fas fa-sign-out" id="user-btn"></i></a></li>
+        </ul>
+    </div>
 
-              </ul>
-            </div>
-            <!--Navbar Bottom Section-->
-            <div class="navbar-bottom">
-              <ul class="menu-right">
-                <li><a href="display.php">Dashboard</a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="imageindex.php">Cases</a></li>
-                <li><a href="index.php">New Entry</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-          </div>
     <div class="container">
         
 
@@ -47,7 +35,7 @@ session_start();
         
         <div class="row" style = "font-family:'Courier New', Courier, monospace">
             <div class="col-md-12">
-                <div class="card">
+                <div class="table">
                     <div class="card-header">
                         <h4>Case Details
                         </h4>
@@ -60,6 +48,10 @@ session_start();
                                 <div class="mb-3">
                                     <label>Appendix</label>
                                     <input type="text" name="appendix" class="form-control" required/>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Item Name</label>
+                                    <input type="text" name="item" class="form-control" required/>
                                 </div>
                                 <div class="mb-3">
                                     <label>Date Custody</label>

@@ -10,16 +10,45 @@ require 'dbcon.php';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styleforfront.css">
 
     <title>Bootstrap demo</title>
   </head>
   <body>
+  <div class="showcase">
+      <!---Navbar Top Section-->
+      <div class="navbar-top">
+        <!--<ul class="left">
+          <li><a href="#">Firm(LOGO)</a></li>
+          <li><a href="#">Number</a></li>
+          <li><a href="#">Address</a></li>
+        </ul>-->
+        <!--<ul class="right">
+          <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+        </ul>-->
+      </div>
+
+    <!---Navbar Bottom Section-->
+      <div class="navbar-bottom">
+        <a href="#" class="brand-left">Central Bureau of Investigation - Case Update</a>
+        <ul class="menu-right">
+          <li><a href="#">Insights</a></li>
+          <li><a href="#">Cases/Evidence</a></li>
+          <li><a href="index.php">Reports</a></li>
+          <!--<li><a href="login.php">Internal Cases</a></li>-->
+          <li><a href="#">Contact</a></li>
+          <li><a href="#"><i class="fas fa-user me" id="user-btn"></i></a></li>
+          <li><a href="frontend.php"><i class="fas fa-sign-out" id="user-btn"></i></a></li>
+        </ul>
+    </div>
     <div class="container">
         <?php include('message.php');?>
 
         <div class="row" style = "font-family:'Courier New', Courier, monospace">
             <div class="col-md-12">
-                <div class="card">
+                <div class="table">
                     <div class="card-header">
                         <h4>Case Update</h4>
                         <div class="card-body">
@@ -49,6 +78,10 @@ require 'dbcon.php';
                                             <input type="text" name="appendix" value="<?=$ci_forms['appendix'];?>" class="form-control" required/>
                                         </div>
                                         <div class="mb-3">
+                                            <label>Item Name</label>
+                                            <input type="text" name="item" value="<?=$ci_forms['appendix'];?>" class="form-control" required/>
+                                        </div>
+                                        <div class="mb-3">
                                             <label>Date Custody</label>
                                             <input class="form-control" name="dcustody" value="<?=$ci_forms['dcustody'];?>" placeholder="MM/DD/YYYY" class="form-control" required/> 
                                         </div> 
@@ -74,14 +107,14 @@ require 'dbcon.php';
                                         </div>
                                         <div class="mb-3">
                                             <label>Additional Description: [kindly be discreet and certain]</label>
-                                            <input type="text" name="description" value="<?=$ci_forms['description'];?>" class="form-control" required/>
+                                            <input type="text" name="description" value="<?=$ci_forms['description'];?>" class="form-control"/>
                                         </div>
                                         <div class="mb-3">
                                             <label for="formFile" class="form-label">Forensic DNA Analysis Result</label>
                                             <input class="form-control" name="dnaanalysis" value="<?=$ci_forms['dnaanalysis'];?>" type="file" id="formFile"/>
                                         </div>
                                         <div class="mb-3">                                        
-                                        <button type="submit" name="save_case" class="btn btn-primary">Save </button>
+                                        <button type="submit" name="update_case" class="btn btn-primary">Save </button>
                                         <a href="index.php" class="btn btn-danger">Back</a>                           
                                         </div>
                                     </form>

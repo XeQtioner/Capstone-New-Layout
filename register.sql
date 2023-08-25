@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 25, 2023 at 07:52 PM
+-- Generation Time: Aug 25, 2023 at 07:53 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -18,29 +18,41 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `crud`
+-- Database: `register`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Table structure for table `reg`
 --
 
-CREATE TABLE `users` (
-  `id` int(255) NOT NULL,
-  `name` varchar(50) DEFAULT NULL,
-  `image` varchar(100) DEFAULT NULL
+CREATE TABLE `reg` (
+  `id` int(11) NOT NULL,
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
+  `gender` varchar(255) NOT NULL,
+  `cnum` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `reg`
+--
+
+INSERT INTO `reg` (`id`, `fname`, `lname`, `gender`, `cnum`, `address`, `email`, `pass`) VALUES
+(9, 'admin', 'admin', 'Male', 'PH', 'PH', 'admin@gmail.com', '12345');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `users`
+-- Indexes for table `reg`
 --
-ALTER TABLE `users`
+ALTER TABLE `reg`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -48,10 +60,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT for table `reg`
 --
-ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+ALTER TABLE `reg`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

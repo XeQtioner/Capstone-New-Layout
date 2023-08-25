@@ -36,6 +36,7 @@ require 'dbcon.php';
                           <th>Case</th>
                           <th>Evidence</th>
                           <th>Appendix</th>
+                          <th>Item Name</th>
                           <th>Date Custody</th>
                           <th>State Conditions</th>
                           <th>Forensic Officer</th>
@@ -58,6 +59,7 @@ require 'dbcon.php';
                                   <td><?php echo $row['id'];?></td>
                                   <td><?php echo $row['evidence'];?></td>
                                   <td><?php echo $row['appendix'];?></td>
+                                  <td><?php echo $row['item'];?></td>
                                   <td><?php echo $row['dcustody'];?></td>
                                   <td><?php echo $row['scustody'];?></td>
                                   <td><?php echo $row['fofficer'];?></td>

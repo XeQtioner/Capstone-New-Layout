@@ -28,7 +28,7 @@ function add(){
 
     echo
     "
-    <script> alert('Image is uploaded'); document.location.href = 'imageindex.php' ; </script>
+    <script> alert('Image is uploaded'); document.location.href = 'indeximage.php' ; </script>
     ";
 }
 

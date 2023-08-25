@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 24, 2023 at 05:33 PM
+-- Generation Time: Aug 25, 2023 at 07:52 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -31,7 +31,7 @@ CREATE TABLE `ci_forms` (
   `id` int(255) NOT NULL,
   `evidence` varchar(255) NOT NULL,
   `appendix` varchar(255) NOT NULL,
-  `itemname` varchar(255) NOT NULL,
+  `item` varchar(255) NOT NULL,
   `dcustody` varchar(255) NOT NULL,
   `scustody` varchar(255) NOT NULL,
   `fofficer` varchar(255) NOT NULL,
@@ -46,9 +46,8 @@ CREATE TABLE `ci_forms` (
 -- Dumping data for table `ci_forms`
 --
 
-INSERT INTO `ci_forms` (`id`, `evidence`, `appendix`, `itemname`, `dcustody`, `scustody`, `fofficer`, `aofficer`, `custodian`, `branch`, `description`, `dnaanalysis`) VALUES
-(60, 'dummy2', 'dummy2', '08/23/2023', 'dummy2', 'dummy2', 'dummy2', 'dummy2', 'dummy2', 'dummy2', ''),
-(63, 'Evidence 1', 'Update Case', '07/05/2023', 'Null', 'Null', 'Null', 'Null', 'Null', 'Null', '');
+INSERT INTO `ci_forms` (`id`, `evidence`, `appendix`, `item`, `dcustody`, `scustody`, `fofficer`, `aofficer`, `custodian`, `branch`, `description`, `dnaanalysis`) VALUES
+(110, 'New Evidence', 'Case 2', 'Weapon', '08/15/2023', 'critical', 'Juan', 'Juan', 'Secretary', '001-999', 'none', '');
 
 --
 -- Indexes for dumped tables
@@ -68,7 +67,7 @@ ALTER TABLE `ci_forms`
 -- AUTO_INCREMENT for table `ci_forms`
 --
 ALTER TABLE `ci_forms`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
