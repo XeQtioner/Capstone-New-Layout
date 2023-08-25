@@ -62,6 +62,10 @@ session_start();
                                     <input type="text" name="appendix" class="form-control" required/>
                                 </div>
                                 <div class="mb-3">
+                                    <label>Item Name</label>
+                                    <input type="text" name="item" class="form-control" required/>
+                                </div>
+                                <div class="mb-3">
                                     <label>Date Custody</label>
                                     <input class="form-control" name="dcustody" placeholder="MM/DD/YYYY" class="form-control" required/> 
                                 </div> 

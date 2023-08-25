@@ -64,6 +64,7 @@ require 'dbcon.php';
                           <th>Case</th>
                           <th>Evidence</th>
                           <th>Appendix</th>
+                          <th>Item Name</th>
                           <th>Date Custody</th>
                           <th>State Conditions</th>
                           <th>Forensic Officer</th>
@@ -90,6 +91,7 @@ require 'dbcon.php';
                                   <td><?= $ci_forms['id'];?></td>
                                   <td><?= $ci_forms['evidence'];?></td>
                                   <td><?= $ci_forms['appendix'];?></td>
+                                  <td><?= $ci_forms['itemname'];?></td>
                                   <td><?= $ci_forms['dcustody'];?></td>
                                   <td><?= $ci_forms['scustody'];?></td>
                                   <td><?= $ci_forms['fofficer'];?></td>

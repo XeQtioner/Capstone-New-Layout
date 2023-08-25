@@ -435,7 +435,7 @@ require 'dbcon.php';
 											<td><?= $ci_forms['id'];?></td>
 											<td><?= $ci_forms['evidence'];?></td>
 											<td><?= $ci_forms['appendix'];?></td>
-											<td><?= $ci_forms['itemname'];?></td>
+											<td><?= $ci_forms['item'];?></td>
 											<td><?= $ci_forms['dcustody'];?></td>
 											<td><?= $ci_forms['scustody'];?></td>
 											<td><?= $ci_forms['fofficer'];?></td>
@@ -637,8 +637,7 @@ require 'dbcon.php';
 										
 										?>
 										<tr>
-											<td>
-												<!--<a href="case-view.php.?id=<?= $ci_forms['id'] ?>" class="btn btn-info btn-sm">View</a>-->
+											<td>												
 												<a href="case-edit.php?id=<?= $ci_forms['id'] ?>" class="btn btn-success btn-sm">Edit </a>                            
 												<form action="code.php" method="POST" class="d-inline">
 													<button type = "submit" name="delete_case" value="<?=$ci_forms['id'];?>" class="btn btn-danger btn-sm" onclick="myFunction()">Delete</button>

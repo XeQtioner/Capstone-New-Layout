@@ -32,6 +32,7 @@ if(isset($_POST['update_case']))
     
     $evidence = mysqli_real_escape_string($con, $_POST['evidence']);
     $appendix = mysqli_real_escape_string($con, $_POST['appendix']);
+    $itemname = mysqli_real_escape_string($con, $_POST['item']);
     $dcustody = mysqli_real_escape_string($con, $_POST['dcustody']);
     $scustody = mysqli_real_escape_string($con, $_POST['scustody']);
     $fofficer = mysqli_real_escape_string($con, $_POST['fofficer']);
@@ -41,7 +42,7 @@ if(isset($_POST['update_case']))
     $description = mysqli_real_escape_string($con, $_POST['description']);
     $dnaanalysis = mysqli_real_escape_string($con, $_POST['dnaanalysis']);
 
-    $query = "UPDATE ci_forms SET evidence= '$evidence', appendix = '$appendix', dcustody = '$dcustody', scustody = '$scustody', 
+    $query = "UPDATE ci_forms SET evidence= '$evidence', appendix = '$appendix', item = '$itemname', dcustody = '$dcustody', scustody = '$scustody', 
                 fofficer = '$fofficer', aofficer = '$aofficer', custodian = '$custodian', branch = '$branch', 
                 description = '$description', dnaanalysis = '$dnaanalysis' WHERE id='$case_id' ";
     $query_run = mysqli_query($con, $query);
@@ -67,6 +68,7 @@ if(isset($_POST['save_case']))
 {
     $evidence = mysqli_real_escape_string($con, $_POST['evidence']);
     $appendix = mysqli_real_escape_string($con, $_POST['appendix']);
+    $itemname = mysqli_real_escape_string($con, $_POST['item']);
     $dcustody = mysqli_real_escape_string($con, $_POST['dcustody']);
     $scustody = mysqli_real_escape_string($con, $_POST['scustody']);
     $fofficer = mysqli_real_escape_string($con, $_POST['fofficer']);
@@ -76,13 +78,13 @@ if(isset($_POST['save_case']))
     $description = mysqli_real_escape_string($con, $_POST['description']);
     $dnaanalysis = mysqli_real_escape_string($con, $_POST['dnaanalysis']);
 
-    $query = "INSERT INTO ci_forms (evidence,appendix,dcustody,scustody,fofficer,aofficer,custodian,branch,description,dnaanalysis) VALUES 
-        ('$evidence','$appendix','$dcustody','$scustody','$fofficer','$aofficer','$custodian','$branch','$description','$dnaanalysis')";
+    $query = "INSERT INTO ci_forms (evidence,appendix,item,dcustody,scustody,fofficer,aofficer,custodian,branch,description,dnaanalysis) VALUES 
+        ('$evidence','$appendix','$itemname','$dcustody','$scustody','$fofficer','$aofficer','$custodian','$branch','$description','$dnaanalysis')";
 
     $query_run = mysqli_query($con, $query);
     if($query_run)
     {
-        $_SESSION['message'] = "Case Created Successfully";
+        $_SESSION['message'] = "Case Updated Successfully";
         header("Location: case-create.php");
         exit(0);
     }

@@ -49,6 +49,10 @@ require 'dbcon.php';
                                             <input type="text" name="appendix" value="<?=$ci_forms['appendix'];?>" class="form-control" required/>
                                         </div>
                                         <div class="mb-3">
+                                            <label>Item Name</label>
+                                            <input type="text" name="item" value="<?=$ci_forms['appendix'];?>" class="form-control" required/>
+                                        </div>
+                                        <div class="mb-3">
                                             <label>Date Custody</label>
                                             <input class="form-control" name="dcustody" value="<?=$ci_forms['dcustody'];?>" placeholder="MM/DD/YYYY" class="form-control" required/> 
                                         </div> 
